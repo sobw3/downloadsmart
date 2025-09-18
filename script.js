@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // -------------------------------------------------------------------
     //           ⚠️  COLOQUE A URL DO SEU SITE PRINCIPAL AQUI  ⚠️
     // -------------------------------------------------------------------
-    const URL_DO_SEU_APP = 'https://www.smartfridgebrasil.shop/';
+    const URL_DO_SEU_APP = 'https://www.smartfridgebrasil.shop';
     // -------------------------------------------------------------------
     //
 
