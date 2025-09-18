@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+    /* Cores extraídas do seu logo SmartFridge */
+    --primary-orange: #FF7A00;
+    --dark-orange: #CC6200;
+    --background-warm: #FFFBF7;
+    --text-primary: #1C1C1E;
+    --text-secondary: #636366;
+    --whatsapp-green: #25D366;
+    --whatsapp-green-hover: #1EAE54;
+    --border-color: #EFEFEF;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-warm);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 380px;
+}
+
+.app-card {
+    background-color: #fff;
+    border-radius: 28px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07);
+    padding: 40px 30px;
+}
+
+.app-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 22px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.subtitle {
+    margin: 4px 0 24px;
+    color: var(--text-secondary);
+    font-size: 1.1em;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.install-button {
+    background-color: var(--primary-orange);
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 1em;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    position: relative;
+    overflow: hidden;
+    height: 54px;
+}
+
+.install-button:hover {
+    background-color: var(--dark-orange);
+}
+
+/* Animação do botão de instalar */
+.button-text {
+    transition: opacity 0.2s ease;
+}
+
+.progress-dots {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.progress-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--primary-orange); /* COR LARANJA NOS PONTOS */
+    animation: bounce 1.2s infinite ease-in-out;
+}
+.progress-dots .dot:nth-child(2) { animation-delay: -0.2s; }
+.progress-dots .dot:nth-child(3) { animation-delay: -0.4s; }
+
+@keyframes bounce {
+    0%, 80%, 100% { transform: scale(0.5); opacity: 0.5; }
+    40% { transform: scale(1.0); opacity: 1; }
+}
+
+.install-button.installing {
+    background-color: #f0f0f0; /* Fundo cinza claro durante a animação */
+}
+
+.install-button.installing .button-text {
+    opacity: 0;
+}
+
+.install-button.installing .progress-dots {
+    opacity: 1;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Botão WhatsApp */
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 1em;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    background-color: #fff;
+    color: var(--text-primary);
+}
+.whatsapp-button:hover {
+    background-color: #f7f7f7;
+    border-color: #ddd;
+}
+
+/* Instruções iOS */
+.instructions {
+    margin-top: 24px;
+    padding: 16px;
+    background-color: var(--background-warm);
+    border: 1px dashed #ddd;
+    border-radius: 12px;
+    font-size: 0.9em;
+}
+.instructions h3 { margin: 0 0 8px; font-size: 1.1em; color: var(--text-primary); }
+.instructions p { margin: 4px 0; color: var(--text-secondary); }

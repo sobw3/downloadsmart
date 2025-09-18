@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalar SmartFridge</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo512.png" type="image/png">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <div class="app-card">
+            <img src="assets/logo512.png" alt="Ícone do SmartFridge" class="app-icon">
+            <h1>SmartFridge</h1>
+            <p class="subtitle">A sua loja de condomínio inteligente.</p>
+
+            <div class="button-container">
+                <button id="install-button" class="install-button">
+                    <span class="button-text">OBTER</span>
+                    <div class="progress-dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </button>
+
+                <a href="https://seu-link-tree-aqui.com" target="_blank" rel="noopener noreferrer" class="whatsapp-button">
+                    <i data-lucide="message-circle"></i>
+                    <span>Grupo de Novidades</span>
+                </a>
+            </div>
+
+            <section id="ios-instructions" class="instructions hidden">
+                 <h3>Instalação no iPhone (iOS)</h3>
+                 <p>1. Toque no ícone de <strong>Compartilhamento</strong> no Safari.</p>
+                 <p>2. Role e selecione <strong>"Adicionar à Tela de Início"</strong>.</p>
+            </section>
+        </div>
+    </main>
+    
+    <script>
+      lucide.createIcons();
+    </script>
+</body>
+</html>
