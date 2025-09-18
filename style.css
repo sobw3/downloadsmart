@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 :root {
-    /* Cores extraídas do seu logo SmartFridge */
     --primary-orange: #FF7A00;
     --dark-orange: #CC6200;
     --background-warm: #FFFBF7;
     --text-primary: #1C1C1E;
     --text-secondary: #636366;
     --whatsapp-green: #25D366;
-    --whatsapp-green-hover: #1EAE54;
     --border-color: #EFEFEF;
 }
 
@@ -52,7 +50,7 @@ h1 {
 }
 
 .subtitle {
-    margin: 4px 0 24px;
+    margin: 4px 0 32px;
     color: var(--text-secondary);
     font-size: 1.1em;
 }
@@ -73,7 +71,7 @@ h1 {
     border-radius: 12px;
     padding: 16px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: all 0.2s ease-in-out;
     position: relative;
     overflow: hidden;
     height: 54px;
@@ -83,7 +81,6 @@ h1 {
     background-color: var(--dark-orange);
 }
 
-/* Animação do botão de instalar */
 .button-text {
     transition: opacity 0.2s ease;
 }
@@ -103,7 +100,7 @@ h1 {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: var(--primary-orange); /* COR LARANJA NOS PONTOS */
+    background-color: var(--primary-orange);
     animation: bounce 1.2s infinite ease-in-out;
 }
 .progress-dots .dot:nth-child(2) { animation-delay: -0.2s; }
@@ -115,7 +112,8 @@ h1 {
 }
 
 .install-button.installing {
-    background-color: #f0f0f0; /* Fundo cinza claro durante a animação */
+    background-color: #f0f0f0;
+    cursor: default;
 }
 
 .install-button.installing .button-text {
@@ -130,7 +128,6 @@ h1 {
     display: none !important;
 }
 
-/* Botão WhatsApp */
 .whatsapp-button {
     display: inline-flex;
     align-items: center;
@@ -151,8 +148,11 @@ h1 {
     background-color: #f7f7f7;
     border-color: #ddd;
 }
+.whatsapp-button i {
+    width: 20px;
+    height: 20px;
+}
 
-/* Instruções iOS */
 .instructions {
     margin-top: 24px;
     padding: 16px;
